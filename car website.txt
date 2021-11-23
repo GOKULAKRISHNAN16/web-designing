@@ -1,0 +1,173 @@
+Car website!!
+
+html file
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lamborghini</title>
+    <link rel="stylesheet" href="car.css">
+</head>
+<body>
+    <header>
+        <h1>Web Designing</h1>
+        <nav>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </nav>
+    </header>
+    <div class="main">
+        <div class="content">
+            <h1>Lamborghini</h1>
+            <h3>Brand New <span>"Lamborghini Urus"</span> </h3>
+            <p>Lamborghini Urus is the first Super Sport Utility Vehicle in the world to merge the soul of a super sports car with the functionality of an SUV. Powered by a 4.0-liter twin-turbo V8 engine producing 650 CV and 850 Nm of torque, Urus accelerates from 0 to 62 mph in 3.6 seconds and reaches a top speed of 190 mph. The design, performance, driving dynamics and driving emotion flow effortlessly into this visionary approach to Lamborghini DNA.
+            </p>
+            <button>Get started</button>
+            <button>Book now</button>
+
+        </div>
+        <div class="image">
+            <img src="lambo.gif" alt="">g
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
+
+
+Css file
+
+*{
+    margin:0;
+    padding:0;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+body{
+    width:100%;
+    min-height: 100vh;
+    background:black;
+    overflow: hidden;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    color: white;
+    animation: header 1s ease-in-out;
+}
+@keyframes header{
+    0%{
+        transform: translateY(-100%);
+    }
+}
+
+nav li{
+    display: inline-block;
+    margin: 10px 20px;
+    font-weight: 600;
+}
+.main{
+    width: 100%;
+    display: flex;
+}
+.content{
+    width:50%;
+    margin-top: 8%;
+    margin-left: 5%;
+    color: white;
+    overflow: hidden;
+    animation: content 2s ease-in-out;
+}
+@keyframes content{
+    0%{
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+}
+.content h1{
+    font-size: 60px;
+    margin-bottom: 1%;
+    letter-spacing: 2px;
+    font-family:'Lucida Sans';
+}
+.content h3{
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-family:sans-serif;
+}
+span{
+    color: brown;
+}
+.content p{
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-family:sans-serif;
+}
+button{
+    padding: 15px 20px;
+    background: transparent;
+    color: aliceblue;
+    font-size: 17px;
+}
+button:hover{
+    color: brown;
+}
+.image{
+    width: 50%;
+    margin-top: 8%;
+    z-index: -1;
+}
+img{
+    width: 40rem;
+    animation: car 5s ease-in-out;
+}
+@keyframes car{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-200%);
+    }
+
+}
+@media screen and (max-width:1200px) {
+    .content{
+        width:100%;
+        text-align:center;
+    }
+    .image{
+        width:100%;
+        position:absolute;
+        bottom:-5%;
+        display: flex;
+        justify-content: center;
+    }
+    img{
+        width: 20rem;
+    }
+    
+}
+@media screen and (max-width:576px) {
+    .content{
+        width:100%;
+        text-align:center;
+    }
+    .image{
+        width:100%;
+        position:absolute;
+        bottom:-5%;
+        display: flex;
+        justify-content: center;
+    }
+    img{
+        width: 20rem;
+    }
+    
+}
